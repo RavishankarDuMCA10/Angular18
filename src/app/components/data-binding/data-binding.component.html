@@ -26,14 +26,25 @@
                 <input type="text" [value]="courseName" />
                 <input [type]="inputType" />
             </div>
+            <div class="col-4">
+                <button class="btn btn-success" (click)="showAlert('Welcome Angular 18')">Show Welcome</button>
+                <span (click)="showAlert('This is from span')">Click me</span>
+                <button class="btn btn-success" (click)="changeCourseName()">Change course name</button>
+            </div>
         </div>
     </div>
-    <div class="col-4">
-        <button class="btn btn-success" (click)="showAlert('Welcome Angular 18')">Show Welcome</button>
-        <span (click)="showAlert('This is from span')">Click me</span>
-        <button class="btn btn-success" (click)="changeCourseName()">Change course name</button>
+    <div class="col-6">
+        <!-- ngModel only works on input element -->
+        <input type="text" [(ngModel)]="courseName" /> - {{courseName}}
+        <input type="checkbox" [(ngModel)]="isIndian">
+        <select [(ngModel)]="stateName">
+            <option value="">Select</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Punjab">Punjab</option>
+        </select>
     </div>
     <div class="col-4">
-        
+        <h2>{{firstName()}}</h2>
     </div>
 </div>
