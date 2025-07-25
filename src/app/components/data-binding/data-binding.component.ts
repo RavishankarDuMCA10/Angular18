@@ -12,16 +12,21 @@ export class DataBindingComponent {
   // Basic data types in angular string, number, boolean, date
 
   courseName: string = "Angular 18";
-
-  inputType = "checkbox";
-
+  inputType = "radio";
+  myClassName: string = "bg-primary";
   rollNo: number = 123;
-
   isIndian: boolean = true;
-
   currentDate: Date = new Date();
   
   constructor() {
 
+  }
+
+  changeCourseName() {
+    this.courseName = "React Js";
+  }
+
+  showAlert(message: string) {
+    alert(message)
   }
 }
